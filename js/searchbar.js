@@ -27,10 +27,11 @@ function redirect(){
     });*/
     const gohome=document.getElementById("homeName");
     gohome.addEventListener("click",()=>{
-        window.location.href="home.html";
+        window.location.href="index.html";
     });
 }
 document.addEventListener("DOMContentLoaded",()=>{
     loadSearchbar();
     redirect();
+
 });
