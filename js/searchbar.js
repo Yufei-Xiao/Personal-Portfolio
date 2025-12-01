@@ -33,5 +33,4 @@ function redirect(){
 document.addEventListener("DOMContentLoaded",()=>{
     loadSearchbar();
     redirect();
-
 });

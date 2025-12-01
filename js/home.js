@@ -82,6 +82,4 @@ email.addEventListener("click",()=>{
 document.addEventListener("DOMContentLoaded",()=>{
   redirect();
   
-
 });
-
