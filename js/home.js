@@ -46,7 +46,7 @@ contact.addEventListener("click",()=>{
 const resume=document.getElementById("resume");
 resume.addEventListener("click",()=>{
     const link = document.createElement("a");
-    link.href = "../assets/files/Yufei_Xiao_resume.pdf"; // ← correct relative path
+    link.href = "assets/files/Yufei_Xiao_resume.pdf"; // ← correct relative path
     link.download = "Yufei_Xiao_Resume.pdf";
     document.body.appendChild(link);
     link.click();
@@ -82,4 +82,5 @@ email.addEventListener("click",()=>{
 document.addEventListener("DOMContentLoaded",()=>{
   redirect();
   
+
 });
