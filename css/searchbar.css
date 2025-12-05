@@ -1,0 +1,13 @@
+#searchbar {
+    
+    display: flex;               /* horizontal layout */
+    align-items: center;         /* vertically center them */
+    gap: 20px;                   /* space between name and dropdown */
+}
+#homeName{
+    cursor: pointer;
+    font-size:30px;
+    font-weight: 600;
+    
+    
+}

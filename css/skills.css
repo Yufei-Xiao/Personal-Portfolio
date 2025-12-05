@@ -1,0 +1,92 @@
+
+.header{
+    display: flex;              /* enable flexbox */
+  justify-content: space-between; /* push items to opposite sides */
+  align-items: center;        /* vertically align */
+  padding: 10px 20px;
+  position:fixed;
+  top:0;
+  left: 0;
+  right: 0; 
+  z-index: 1000;
+}
+/* Cyberpunk Skills Page Styles */
+/* Scrollbar width */
+::-webkit-scrollbar {
+    width: 6px;                    /* Thin like your image */
+}
+
+/* Track background (dark, subtle) */
+::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.3); /* Transparent black */
+    box-shadow: inset 0 0 10px rgba(0, 255, 255, 0.2);
+}
+
+/* Scroll thumb (neon cyan rectangle) */
+::-webkit-scrollbar-thumb {
+    background: #00eaff;           /* Cyan core color */
+    border-radius: 0;              /* Sharp rectangle */
+    box-shadow:
+        0 0 6px #00eaff,
+        0 0 12px #00eaff,
+        inset 0 0 4px #00eaff;     /* Glow like yours */
+}
+
+/* Brighter when hovered */
+::-webkit-scrollbar-thumb:hover {
+    background: #6af7ff;
+    box-shadow:
+        0 0 10px #00f7ff,
+        0 0 20px #00f7ff,
+        inset 0 0 6px #00f7ff;
+}
+
+body {
+    margin: 0;
+    padding: 2rem;
+    padding-top: 100px;
+    min-height: 100vh;
+}
+
+/* Skills Container */
+#skills {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 3rem;
+    margin-top: 4rem;
+
+    opacity: 0;
+    transform: translateY(50px);
+    animation: skillPopUp 1s ease forwards;
+}
+#skills h1 {
+    margin-bottom: 8px; /* reduce space under title */
+}
+#skills p {
+    margin: 4px 0; /* reduce vertical gap (default is ~16px) */
+}
+
+#skills > div {
+    width: 250px;       /* same width for each card */
+    min-height: 200px;  /* same height for each section */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* keeps text starting from top */
+    text-align: center;
+}
+
+@keyframes skillPopUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#skills > div:nth-child(1) { animation-delay: 0.3s; }
+#skills > div:nth-child(2) { animation-delay: 0.45s; }
+#skills > div:nth-child(3) { animation-delay: 0.6s; }
+
+
+
+
