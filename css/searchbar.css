@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #searchbar {
     
     display: flex;               /* horizontal layout */
@@ -11,3 +12,18 @@
     
     
 }
+=======
+#searchbar {
+    
+    display: flex;               /* horizontal layout */
+    align-items: center;         /* vertically center them */
+    gap: 20px;                   /* space between name and dropdown */
+}
+#homeName{
+    cursor: pointer;
+    font-size:30px;
+    font-weight: 600;
+    
+    
+}
+>>>>>>> e5cd679387b989ee904e6f85d15292e365d6e2c5

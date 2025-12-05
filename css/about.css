@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 body {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -260,3 +261,267 @@ body {
 
 
 
+=======
+body {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 80px 20px 20px 20px;
+    max-width: 1400px;
+    margin: 0 auto;
+    
+    grid-template-areas:
+            "name overview"
+            "name education"
+            "experiences experiences"
+            "about about"
+            "experience experience"
+            "projects projects"
+            "skills skills"
+            "contact contact"
+            "qanda profiles";
+}
+
+/* Header */
+.header {
+    grid-area:header;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    padding: 10px 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+#name{
+    grid-area: name;
+    position: relative;
+    top:20px;
+    left:20px;
+}
+#name h1{
+    margin:0;
+    font-size: 50px;
+}
+#name h2{
+    margin:0;
+    font-size:20px;
+}
+
+#education{
+    grid-area: education;
+    padding: 10px;
+    position:relative;
+    left:0px;
+    top:100px;
+    height:100px;
+}
+#education h1{
+    font-size: 30px;
+    margin:0;
+}
+#education h2{
+    font-size: 20px;
+    margin:0;
+}
+#education h3{
+    margin:0;
+    font-size: 25px;
+}
+#experiences {
+    grid-area: experiences;
+}
+
+#about {
+    grid-area: about;
+    font-size: 20px;
+}
+
+#experience {
+    grid-area: experience;
+    font-size: 20px;
+}
+
+#projects {
+    grid-area: projects;
+    font-size: 20px;
+}
+
+#skills {
+    grid-area: skills;
+    font-size: 20px;
+}
+
+#contact {
+    grid-area: contact;
+    font-size: 20px;
+}
+
+
+#about a, #experience a, #projects a, #skills a, #contact a {
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: black;               /* accent color */
+  text-decoration: none;
+  display: block;
+  margin-bottom: 8px;
+  
+}
+#about a:hover, #experience a:hover, #projects a:hover, #skills a:hover, #contact a:hover{
+    transform: scale(1.02);
+  transition: all 0.3s ease;
+}
+#Q\&A {
+    grid-area: qanda;
+}
+.question{
+    font-size: 30px;
+    border-bottom: 2px solid black;
+    padding-bottom: 6px;
+    margin-bottom: 10px;
+}
+.question:hover {
+  
+  cursor: pointer;
+  transform: scale(1.01);
+  transition: all 0.3s ease;
+}
+
+.answer{
+    font-size: 25px;
+    display:none;
+    border-left: 4px solid cyan; /* blue line */
+  padding-left: 12px;             /* space between line and text */
+  margin: 8px 0;
+  
+}
+#overview {
+    grid-area: overview;
+}
+
+#profiles {
+    grid-area: profiles;
+    display: flex;
+  flex-wrap: wrap;       /* allows wrapping to next line */
+  gap: 12px;             /* spacing between buttons */
+  justify-content: center; /* center them horizontally */
+}
+#profiles button {
+          /* buttons can shrink/grow */
+  min-width: 150px;      /* optional: limit button width */
+  width:300px;
+  height:50px;
+  font-size: 20px;
+  margin: 10px;
+}
+.icon {
+    
+    width: 20px !important;
+    height: 20px !important;
+    margin-right: 10px !important;
+    filter: brightness(0) contrast(100%);
+    transition: all 0.3s ease;
+    vertical-align: middle;
+    display: inline-block;
+}
+/* Picture under name */
+#personalpicture {
+    margin-top: 20px;
+    
+}
+
+#personalpicture img {
+    box-sizing: border-box;
+    clip-path: polygon(
+    20px 0, 100% 0, 100% calc(100% - 20px),
+    calc(100% - 20px) 100%, 0 100%, 0 20px
+  );
+  padding: 10px; /* keeps text/image away from clipped edges */
+  border: 3px solid black; /* neon border */
+    width: 80%;
+    height: auto;
+    display: block;
+}
+.experienceCard{
+    width:50%;
+    padding: 0px 10px;
+    box-sizing: border-box;
+    border: 3px solid black;
+    margin: 10px;
+}
+.experienceCard h1{
+    font-size: 30px;
+}
+.experienceCard p{
+    font-size:20px;
+    font-weight: 500;
+}
+/* Scrollbar width */
+::-webkit-scrollbar {
+    width: 6px;                    /* Thin like your image */
+}
+
+/* Track background (dark, subtle) */
+::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.3); /* Transparent black */
+    box-shadow: inset 0 0 10px rgba(0, 255, 255, 0.2);
+}
+
+/* Scroll thumb (neon cyan rectangle) */
+::-webkit-scrollbar-thumb {
+    background: #00eaff;           /* Cyan core color */
+    border-radius: 0;              /* Sharp rectangle */
+    box-shadow:
+        0 0 6px #00eaff,
+        0 0 12px #00eaff,
+        inset 0 0 4px #00eaff;     /* Glow like yours */
+}
+
+/* Brighter when hovered */
+::-webkit-scrollbar-thumb:hover {
+    background: #6af7ff;
+    box-shadow:
+        0 0 10px #00f7ff,
+        0 0 20px #00f7ff,
+        inset 0 0 6px #00f7ff;
+}
+
+/* Responsive */
+/*@media (max-width: 1024px) {
+    body {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas:
+            "name education"
+            "experiences experiences"
+            "about experience"
+            "projects skills"
+            "contact overview"
+            "qanda profiles";
+    }
+}*/
+
+@media (max-width: 768px) {
+    body {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "name"
+            "education"
+            "experiences"
+            "about"
+            "experience"
+            "projects"
+            "skills"
+            "contact"
+            "overview"
+            "qanda"
+            "profiles";
+    }
+}
+
+
+
+>>>>>>> e5cd679387b989ee904e6f85d15292e365d6e2c5

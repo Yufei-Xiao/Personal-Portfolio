@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* Scrollbar width */
 ::-webkit-scrollbar {
     width: 6px;                    /* Thin like your image */
@@ -345,3 +346,352 @@ body{
 }
 
 
+=======
+/* Scrollbar width */
+::-webkit-scrollbar {
+    width: 6px;                    /* Thin like your image */
+}
+
+/* Track background (dark, subtle) */
+::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.3); /* Transparent black */
+    box-shadow: inset 0 0 10px rgba(0, 255, 255, 0.2);
+}
+
+/* Scroll thumb (neon cyan rectangle) */
+::-webkit-scrollbar-thumb {
+    background: #00eaff;           /* Cyan core color */
+    border-radius: 0;              /* Sharp rectangle */
+    box-shadow:
+        0 0 6px #00eaff,
+        0 0 12px #00eaff,
+        inset 0 0 4px #00eaff;     /* Glow like yours */
+}
+
+/* Brighter when hovered */
+::-webkit-scrollbar-thumb:hover {
+    background: #6af7ff;
+    box-shadow:
+        0 0 10px #00f7ff,
+        0 0 20px #00f7ff,
+        inset 0 0 6px #00f7ff;
+}
+
+body{
+    margin:0;
+    padding-top: 70px;
+    padding: 2rem;
+    min-height: 100vh;
+}
+.header{
+    margin-right: 10px;
+    display: flex;              /* enable flexbox */
+  justify-content: space-between; /* push items to opposite sides */
+  align-items: center;        /* vertically align */
+  padding: 10px 20px;
+  position:fixed;
+  top:0;
+  left: 0;
+  right: 0; 
+  z-index: 1000;
+}
+
+
+/* Project List Container */
+#projectList {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 4rem auto 0 auto;
+    padding: 1rem;
+}
+
+/* Individual Project Card */
+.project {
+    width:280px;
+    height:auto;
+    background: var(--dark);
+    border: 3px solid var(--cyan);
+    clip-path: polygon(
+        0 0, 
+        calc(100% - 30px) 0, 
+        100% 30px, 
+        100% 100%, 
+        30px 100%, 
+        0 calc(100% - 30px)
+    );
+    padding: 0;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s ease;
+    box-shadow: 0 5px 20px rgba(0, 255, 210, 0.2);
+}
+
+.project:hover {
+    transform: translateY(-10px) scale(1.02);
+    border-color: var(--yellow);
+    box-shadow: 
+        0 10px 40px rgba(0, 255, 210, 0.4),
+        0 0 60px rgba(248, 239, 2, 0.3),
+        inset 0 0 20px rgba(0, 255, 210, 0.1);
+}
+
+/* Glowing corner effect */
+.project::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 30px;
+    height: 30px;
+    background: var(--cyan);
+    clip-path: polygon(100% 0, 100% 100%, 0 0);
+    transition: all 0.4s ease;
+    z-index: 1;
+}
+
+.project:hover::before {
+    background: var(--yellow);
+    box-shadow: 0 0 20px var(--yellow);
+}
+
+.project::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 30px;
+    height: 30px;
+    background: var(--cyan);
+    clip-path: polygon(0 100%, 100% 100%, 0 0);
+    transition: all 0.4s ease;
+    z-index: 1;
+}
+
+.project:hover::after {
+    background: var(--yellow);
+    box-shadow: 0 0 20px var(--yellow);
+}
+
+/* Project Image */
+.project img {
+    width: 100%;
+    height: 200px;
+    
+    display: block;
+    transition: all 0.4s ease;
+    filter: grayscale(30%) brightness(0.9);
+    border-bottom: 2px solid var(--cyan);
+}
+
+.project:hover img {
+    filter: grayscale(0%) brightness(1.1);
+}
+
+/* Project Title */
+.project h1 {
+    font-size: 2rem;
+    margin: 0;
+    padding: 1.5rem 1.5rem 1rem 1.5rem;
+    color: var(--cyan);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 700;
+    text-shadow: 0 0 10px rgba(0, 255, 210, 0.5);
+    transition: all 0.3s ease;
+}
+
+.project:hover h1 {
+    color: var(--yellow);
+    text-shadow: 0 0 15px rgba(248, 239, 2, 0.8);
+}
+
+/* Description Container */
+.description {
+    padding: 0 1.5rem 1.5rem 1.5rem;
+}
+
+/* Tools Container */
+.tools {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+}
+
+.tools h2 {
+    font-size: 0.9rem;
+    margin: 0;
+    padding: 0.4rem 1rem;
+    background: var(--purple);
+    color: var(--cyan);
+    border: 2px solid var(--cyan);
+    clip-path: polygon(0 0, calc(100% - 8px) 0, 100% 8px, 100% 100%, 0 100%);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.project:hover .tools h2 {
+    background: var(--cyan);
+    color: var(--black);
+    border-color: var(--yellow);
+    transform: translateX(5px);
+}
+
+.tools h2:nth-child(2) {
+    transition-delay: 0.1s;
+}
+
+.tools h2:nth-child(3) {
+    transition-delay: 0.2s;
+}
+
+/* Project Description Text */
+.description p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--white);
+    margin: 0 0 1.5rem 0;
+    opacity: 0.9;
+}
+
+/* GitHub Link */
+.description a {
+    display: inline-block;
+    padding: 0.7rem 1.5rem;
+    background: transparent;
+    color: var(--cyan);
+    border: 2px solid var(--cyan);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 1px;
+    font-size: 0.9rem;
+    clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100% 100%, 10px 100%, 0 calc(100% - 10px));
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.description a::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: var(--cyan);
+    transition: left 0.4s ease;
+    z-index: -1;
+}
+
+.description a:hover {
+    color: var(--black);
+    border-color: var(--yellow);
+    transform: translateX(5px);
+    box-shadow: 0 0 20px rgba(0, 255, 210, 0.5);
+}
+
+.description a:hover::before {
+    left: 0;
+}
+
+/* Loading animation for projects */
+.project {
+    opacity: 0;
+    animation: projectFadeIn 0.6s ease forwards;
+}
+
+.project:nth-child(1) { animation-delay: 0.1s; }
+.project:nth-child(2) { animation-delay: 0.2s; }
+.project:nth-child(3) { animation-delay: 0.3s; }
+.project:nth-child(4) { animation-delay: 0.4s; }
+.project:nth-child(5) { animation-delay: 0.5s; }
+.project:nth-child(6) { animation-delay: 0.6s; }
+
+@keyframes projectFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Scanline effect */
+/*body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: repeating-linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.15),
+        rgba(0, 0, 0, 0.15) 1px,
+        transparent 1px,
+        transparent 2px
+    );
+    pointer-events: none;
+    z-index: 9999;
+    animation: scanline 8s linear infinite;
+}
+
+@keyframes scanline {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(10px); }
+}*/
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    body {
+        padding: 1rem;
+        padding-top: 80px;
+    }
+    
+    #projectList {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .project h1 {
+        font-size: 1.6rem;
+        padding: 1rem;
+    }
+    
+    .project img {
+        height: auto;
+    }
+    
+    .description {
+        padding: 0 1rem 1rem 1rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .project h1 {
+        font-size: 1.4rem;
+    }
+    
+    .tools {
+        gap: 0.5rem;
+    }
+    
+    .tools h2 {
+        font-size: 0.8rem;
+        padding: 0.3rem 0.8rem;
+    }
+    
+    .description p {
+        font-size: 0.9rem;
+    }
+}
+
+
+>>>>>>> e5cd679387b989ee904e6f85d15292e365d6e2c5
