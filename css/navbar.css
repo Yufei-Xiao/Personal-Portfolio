@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 .navbar {
     
@@ -41,47 +40,3 @@ nav a.active {
     
     color:black;
 }
-=======
-
-.navbar {
-    
-    padding:10px;
-    display: flex;            /* arrange links in a row */
-    width: 100%;              /* full width */
-     /*background: linear-gradient(90deg, #9aa000, #292f00);*/
-    background: rgba(25, 28, 0, 0.68); 
-    gap:30px;
-    border: 1px solid black;
-    clip-path: polygon(
-    20px 0,               /* top-left cut */
-    100% 0,               /* top-right corner */
-    100% calc(100% - 20px), /* bottom-right cut start */
-    calc(100% - 20px) 100%, /* bottom-right cut end */
-    0 100%,               /* bottom-left corner */
-    0 20px                /* top-left cut end */
-  );
-}
-
-/* Each link as a tile */
-.navbar a {
-    display: block;
-    
-    flex: 1;                  /* all links take equal width */
-    text-align: center;       /* center the text */
-    padding: 0;          /* vertical spacing */
-    font-size: 24px; 
-    font-weight: 500;      
-    text-decoration: none;    /* remove underline */
-    color:white;
-    transition: background 0.1s;
-}
-.navbar a:hover {
-    background-color: cyan;
-    color: black;
-}
-nav a.active {
-    
-    
-    color:black;
-}
->>>>>>> e5cd679387b989ee904e6f85d15292e365d6e2c5
