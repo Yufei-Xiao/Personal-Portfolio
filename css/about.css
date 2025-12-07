@@ -178,7 +178,7 @@ body {
   );
   padding: 10px; /* keeps text/image away from clipped edges */
   border: 3px solid black; /* neon border */
-    width: 80%;
+    width: 60%;
     height: auto;
     display: block;
 }
