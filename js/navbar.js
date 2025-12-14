@@ -6,6 +6,7 @@ function loadNavbar(){
         <a href="projects.html">Projects</a>
         <a href="skills.html">Skills</a>
         <a href="contact.html">Contact</a>
+        <a href="resume.html">Resume</a>
     </nav>
     `;
     document.getElementById('navbar').innerHTML=navbar;

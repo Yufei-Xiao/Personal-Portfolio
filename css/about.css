@@ -15,6 +15,7 @@ body {
             "projects projects"
             "skills skills"
             "contact contact"
+            "resume resume"
             "qanda profiles";
 }
 
@@ -96,9 +97,13 @@ body {
     grid-area: contact;
     font-size: 20px;
 }
+#resume {
+    grid-area: resume;
+    font-size: 20px;
+}
 
 
-#about a, #experience a, #projects a, #skills a, #contact a {
+#about a, #experience a, #projects a, #skills a, #contact a,#resume a {
   font-weight: bold;
   font-size: 1.2rem;
   color: black;               /* accent color */
@@ -107,7 +112,7 @@ body {
   margin-bottom: 8px;
   
 }
-#about a:hover, #experience a:hover, #projects a:hover, #skills a:hover, #contact a:hover{
+#about a:hover, #experience a:hover, #projects a:hover, #skills a:hover, #contact a:hover, #resume a:hover{
     transform: scale(1.02);
   transition: all 0.3s ease;
 }
@@ -252,6 +257,7 @@ body {
             "projects"
             "skills"
             "contact"
+            "resume"
             "overview"
             "qanda"
             "profiles";

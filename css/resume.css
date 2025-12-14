@@ -1,0 +1,79 @@
+.header{
+    display: flex;              /* enable flexbox */
+  justify-content: space-between; /* push items to opposite sides */
+  align-items: center;        /* vertically align */
+  padding: 10px 20px;
+  position:fixed;
+  top:0;
+  left: 0;
+  right: 0; 
+  margin-right: 10px;
+  z-index: 1000;
+}
+/* Cyberpunk Skills Page Styles */
+/* Scrollbar width */
+::-webkit-scrollbar {
+    width: 6px;                    /* Thin like your image */
+}
+
+/* Track background (dark, subtle) */
+::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.3); /* Transparent black */
+    box-shadow: inset 0 0 10px rgba(0, 255, 255, 0.2);
+}
+
+/* Scroll thumb (neon cyan rectangle) */
+::-webkit-scrollbar-thumb {
+    background: #00eaff;           /* Cyan core color */
+    border-radius: 0;              /* Sharp rectangle */
+    box-shadow:
+        0 0 6px #00eaff,
+        0 0 12px #00eaff,
+        inset 0 0 4px #00eaff;     /* Glow like yours */
+}
+
+/* Brighter when hovered */
+::-webkit-scrollbar-thumb:hover {
+    background: #6af7ff;
+    box-shadow:
+        0 0 10px #00f7ff,
+        0 0 20px #00f7ff,
+        inset 0 0 6px #00f7ff;
+}
+body {
+  margin: 0;
+  
+}
+
+
+/* Center the viewer */
+.viewer-wrapper {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 50vw;     /* 50% of page width */
+  height: 85vh;    /* 80% of page height */
+
+  background: white;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+  border-radius: 12px;
+
+  overflow: hidden; /* clips iframe edges */
+}
+
+/* PDF fills the container */
+.pdf-viewer {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+@media (max-width: 900px) {
+  .viewer-wrapper {
+    width: 95vw;
+    height: 90vh;
+    border-radius: 0;
+  }
+}
+
